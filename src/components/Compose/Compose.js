@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProfileIcon from 'react-icons/lib/md/person-outline';
+import { MdPersonOutline } from 'react-icons/md';
 
 import './Compose.css';
 
@@ -30,7 +30,7 @@ export default class Compose extends Component {
       <section className="Compose__parent">
         <div className="Compose__top">
           <div className="Compose__profile-picture">
-            <ProfileIcon />
+            <MdPersonOutline />
           </div>
 
           {/* This is where you type the message for your new post */}

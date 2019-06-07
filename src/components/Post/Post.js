@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import ProfileIcon from 'react-icons/lib/md/person-outline';
-import ReplyIcon from 'react-icons/lib/md/chat-bubble-outline';
-import FavoriteIcon from 'react-icons/lib/md/favorite-outline';
-import MessageIcon from 'react-icons/lib/md/mail-outline';
-import MasterControlIcon from 'react-icons/lib/md/more-vert';
+import {
+  MdPersonOutline,
+  MdMoreVert,
+  MdChatBubbleOutline,
+  MdFavoriteBorder,
+  MdMailOutline,
+} from 'react-icons/md';
 
 import './Post.css';
 
 import Edit from './Edit/Edit';
 
-//////////////////////////////////////////////////////// THIS COMPONENT IS BEING RENDERED IN THE *APP* COMPONENT
+///////////// THIS COMPONENT IS BEING RENDERED IN THE *APP* COMPONENT
 
 export default class Post extends Component {
   constructor() {
@@ -60,7 +62,7 @@ export default class Post extends Component {
       <section className="Post__parent" onClick={this.hideMasterMenu}>
         {/* Three dots in top right corner */}
         <div className="Post__master-controls">
-          <MasterControlIcon onClick={this.toggleMasterMenu} />
+          <MdMoreVert onClick={this.toggleMasterMenu} />
 
           {/* Drop-down menu. Remember that the "showMasterMenu" variable has been destructured off of this.state */}
           <div
@@ -75,7 +77,7 @@ export default class Post extends Component {
         {/* This is where all the meta data of the post will go (who, when, where) */}
         <div className="Post__meta-data">
           <div className="Post__profile-picture">
-            <ProfileIcon />
+            <MdPersonOutline />
           </div>
 
           <span className="Post__name">DevMountain</span>
@@ -103,9 +105,9 @@ export default class Post extends Component {
 
         {/* These are all of the cute little icons in the bottom left corner */}
         <div className="Post__user-controls">
-          <ReplyIcon className="Post__control-icon" />
-          <FavoriteIcon className="Post__control-icon" />
-          <MessageIcon className="Post__control-icon" />
+          <MdChatBubbleOutline className="Post__control-icon" />
+          <MdFavoriteBorder className="Post__control-icon" />
+          <MdMailOutline className="Post__control-icon" />
         </div>
       </section>
     );
